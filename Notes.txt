@@ -1,0 +1,197 @@
+## React 
+
+React  is a javascript library and single page application..
+It use made for user interface (UI)
+it makes reuseable components..
+its found Meta..
+
+React Hooks:-
+
+A. Props :- props = parent -> child data transfer || 
+    Props (Properties) are read-only values used to pass data from a parent component to a child component in React. 
+    They make components reusable and dynamic.
+
+B. State :- state = child -> parent data transfer || 
+    State is a built-in React object that allows components to manage and store data that can change over time. 
+    It enables dynamic rendering and interactivity in React applications.
+
+C. useState :- useState is a React Hook that allows functional components to have state variables. 
+   It provides a way to declare and manage state within a component, enabling dynamic rendering and interactivity.
+
+    Hindi
+
+    useState ek React Hook hai jo functional component ke andar state (data) ko create aur update karne ke liye use hota hai.
+    Jab state update hoti hai, React component ko dubara render karta hai aur UI update ho jati hai.
+
+    2. Syntax
+    const [state, setState] = useState(initialValue);
+
+    Example
+
+    const [count, setCount] = useState(0);
+
+    Meaning
+
+    count      → Current Value
+
+    setCount   → Update Function
+
+    0          → Initial Value
+    3. Import
+
+    import { useState } from "react";
+
+    4. Counter Example
+    import { useState } from "react";
+
+    function App() {
+
+    const [count, setCount] = useState(0);
+
+    return (
+        <>
+        <h1>{count}</h1>
+
+        <button onClick={() => setCount(count + 1)}>
+            Increment
+        </button>
+        </>
+    );
+    }
+
+    export default App;
+
+    5. Decrement
+    <button onClick={() => setCount(count - 1)}>
+    Decrement
+    </button>
+
+    6. Reset
+    <button onClick={() => setCount(0)}>
+    Reset
+    </button>
+
+    7. String State
+    const [name, setName] = useState("Aakash");
+
+    Update
+
+    setName("Rahul");
+
+    Example
+
+    import { useState } from "react";
+
+    function App() {
+
+    const [name,setName]=useState("Aakash");
+
+    return(
+
+    <>
+
+    <h1>{name}</h1>
+
+    <button
+    onClick={()=>setName("Rahul")}
+    >
+
+    Change Name
+
+    </button>
+
+    </>
+
+    )
+
+    }
+
+    8. Boolean State
+    const [isLogin, setIsLogin] = useState(false);
+    <button
+    onClick={() => setIsLogin(!isLogin)}
+    >
+
+    Toggle
+
+    </button>
+
+    Output
+
+    {isLogin ? "Welcome" : "Please Login"}
+
+    9. Number State
+    const [age, setAge] = useState(21);
+
+    10. Array State
+    const [fruits, setFruits] = useState([
+    "Apple",
+    "Mango",
+    "Banana"
+    ]);
+
+    Display
+
+    {
+    fruits.map((item,index)=>(
+    <h2 key={index}>
+    {item}
+    </h2>
+    ))
+    }
+
+    11. Object State
+    const [user,setUser]=useState({
+
+    name:"Aakash",
+
+    age:21
+
+    });
+
+    Update
+
+    setUser({
+
+    ...user,
+
+    age:22
+
+    })
+
+    12. Multiple States
+    const [name,setName]=useState("");
+
+    const [age,setAge]=useState(0);
+
+    const [city,setCity]=useState("");
+
+    13. Functional Update
+
+    Best Practice
+
+    setCount(prev => prev + 1);
+
+    Instead of
+
+    setCount(count + 1);
+    
+    14. Why Functional Update?
+    setCount(prev => prev + 1);
+
+    React latest value use karta hai.
+
+    15. Rules of Hooks
+
+    ✅ Top Level par call karo
+
+    ✅ Functional Component ke andar call karo
+
+    ❌ Loop ke andar nahi
+
+    ❌ if ke andar nahi
+
+    ❌ Nested Function ke andar nahi
+
+
+

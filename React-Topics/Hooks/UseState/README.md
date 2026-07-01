@@ -16,3 +16,21 @@ Note: This will impact Vite dev & build performances.
 ## Expanding the Oxlint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+
+## Hooks
+useState (Sabse important)
+useEffect
+useRef
+useContext
+useReducer
+useMemo
+useCallback
+custom Hooks
+
+## UseState
+
+useState ek React Hook hai jo functional components mein state (data) ko create aur update karne ke liye use hota hai. Jab state update hoti hai, component automatically re-render ho jata hai.
+
+syntax :- const [state, setState] = useState(initialValue);
+
+
