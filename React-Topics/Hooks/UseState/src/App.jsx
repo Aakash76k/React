@@ -8,6 +8,7 @@ import Decrement from './Components/Decrement'
 import Reset from './Components/Reset'
 import StringState from './Components/StringState'
 import BooleanState from './Components/BooleanState'
+import ArrayState from './Components/ArrayState'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Reset/>
       <StringState/>
       <BooleanState/>
+      <ArrayState/>
     </>
   );
 }
