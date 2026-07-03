@@ -6,6 +6,8 @@ import './App.css'
 import Increment from './Components/Increment'
 import Decrement from './Components/Decrement'
 import Reset from './Components/Reset'
+import StringState from './Components/StringState'
+import BooleanState from './Components/BooleanState'
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Increment />
       <Decrement/>
       <Reset/>
+      <StringState/>
+      <BooleanState/>
     </>
   );
 }
