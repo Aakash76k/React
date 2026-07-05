@@ -194,4 +194,25 @@ C. useState :- useState is a React Hook that allows functional components to hav
     ❌ Nested Function ke andar nahi
 
 
+📘 useEffect
+Definition
+
+useEffect is a React Hook used to perform side effects in functional components after rendering.
+
+Hindi
+
+useEffect ek React Hook hai jo component render hone ke baad kuch extra kaam (side effects) karne ke liye use hota hai.
+
+Side Effects kya hote hain?
+
+Ye aise kaam hote hain jo sirf UI dikhane ka part nahi hote.
+
+Examples:
+
+🌐 API se data lana
+⏰ Timer chalana
+📄 Browser tab ka title change karna
+💾 Local Storage me data save karna
+🎧 Event Listener lagana
+
 

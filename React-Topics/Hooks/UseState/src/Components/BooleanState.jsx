@@ -6,7 +6,10 @@ function BooleanState() {
   return (
     <>
       <div className="w-40 h-40 border-4 border-sky-500">
-        <h1 className="bg-red-50 border-black"> {isLogin ? "Welcome" : "Please Login"}</h1>
+        <h1 className="bg-red-50 border-black">
+          {" "}
+          {isLogin ? "Welcome" : "Please Login"}
+        </h1>
         <button
           className="px-6 py-2 bg-red-100 border-2 border-indigo-600 rounded-lg shadow-xl"
           onClick={() => setIsLogin(!isLogin)}
