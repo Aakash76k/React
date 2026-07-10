@@ -25,3 +25,9 @@
   color: rgb(140, 31, 146);
   font-size: 50px;
 }
+
+@media (max-width: 420px){
+  .clock-container{ width: 92%; padding: 16px; }
+  .clock-time{ font-size: 2rem; }
+  .clock-date{ font-size: 2rem; }
+}
