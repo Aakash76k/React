@@ -1,0 +1,27 @@
+.clock-container {
+  width: 800px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 100px;
+  border: 5px solid #000;
+  border-radius: 10px;
+  box-shadow: 10px 0 50px gray;
+  background-color: black;
+}
+
+.clock-title {
+  font-size: 50px;
+  color: lightblue;
+  margin-bottom: 20px;
+}
+
+.clock-time {
+  font-size: 70px;
+  color: rgb(255, 72, 0);
+}
+
+.clock-date {
+  margin-top: 20px;
+  color: rgb(140, 31, 146);
+  font-size: 50px;
+}
