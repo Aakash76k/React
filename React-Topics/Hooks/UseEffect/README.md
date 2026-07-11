@@ -20,9 +20,19 @@ If you are developing a production application, we recommend using TypeScript wi
 ...existing code...
 
 ## Screenshots
+ 
+ first of all open React-Topic folder and open Hooks folder and open the Project.jsx and project .css and App.jsx 
 
-![App screenshot 1](./public/Screenshot/DigitalClock.png)
+ how to run :- Open Terminal and cd React-Topics after that cd Hooks and after that cd UseEffect and after that run command npm run dev 
+
+1 Digital Clock using useEffect in Hooks
+
+![Digital Clock 1](./public/Screenshot/DigitalClock.png)
+
+2 Stopwatch using UseEffect in Hooks
+![Stopwatch 2](./public/Screenshot/Stopwatch.png)
 
 
-...existing code...
+
+
 

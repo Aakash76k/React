@@ -1,0 +1,36 @@
+.container {
+  width: 800px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 100px;
+  border: 5px solid #000;
+  border-radius: 10px;
+  box-shadow: 10px 0 50px gray;
+  background-color: black;
+}
+
+.title {
+  font-size: 50px;
+  color: lightblue;
+  margin-bottom: 20px;
+}
+
+.time {
+  font-size: 70px;
+  color: rgb(255, 72, 0);
+}
+
+.button button{
+    margin:10px;
+    padding:10px 20px;
+    cursor:pointer;
+    border:none;
+    border-radius:8px;
+    color: blueviolet;
+    background: whitesmoke;
+}
+
+.button button:hover{
+    opacity:0.8;
+}
+
