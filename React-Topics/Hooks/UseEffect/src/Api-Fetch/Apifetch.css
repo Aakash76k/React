@@ -1,0 +1,58 @@
+.container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px;
+  border: 4px solid #000;
+  border-radius: 12px;
+  background: #000;
+  box-shadow: 0 0 20px gray;
+  text-align: center;
+ 
+  
+}
+
+.user {
+  margin-top: 20px;
+  padding: 20px;
+  max-width: 700px;
+  border: 2px solid #555;
+  border-radius: 10px;
+  background: whitesmoke;
+}
+
+.key {
+  color: antiquewhite;
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.title {
+  color: white;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 300px;
+  padding: 12px 15px;
+  border: 2px solid cyan;
+  border-radius: 8px;
+  background: white;
+  color: black;        
+  font-size: 16px;
+  outline: none;
+}
+
+input::placeholder {
+  color: gray;         
+}
+
+.userlist{
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.user:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+  box-shadow: 0 0 15px cyan;
+}

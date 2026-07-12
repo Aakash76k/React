@@ -1,38 +1,104 @@
-# React + Vite
+# ⚛️ React Hooks - useEffect
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This repository contains React projects built while learning the **useEffect** hook. Each project focuses on understanding side effects, state management, timers, and API integration in React.
 
-Currently, two official plugins are available:
+## 📚 Projects
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### ⏰ Digital Clock
+- Displays the current time and date
+- Updates every second using `setInterval()`
+- Uses cleanup function to prevent memory leaks
 
-## React Compiler
+### ⏱️ Stopwatch
+- Start, Stop and Reset functionality
+- Displays Hours, Minutes, Seconds and Centiseconds
+- Built using `useState` and `useEffect`
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### 🌐 API Fetch with Search
+- Fetches user data from the JSONPlaceholder API
+- Displays users in responsive cards
+- Real-time search by user name
+- Uses `fetch()`, `async/await`, `map()` and `filter()`
 
-Note: This will impact Vite dev & build performances.
+## 🛠️ Technologies Used
 
-## Expanding the Oxlint configuration
+- React
+- Vite
+- JavaScript (ES6+)
+- CSS
+- JSONPlaceholder API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🚀 How to Run
 
-...existing code...
+```bash
+cd React-Topics
+cd Hooks
+cd UseEffect
+npm install
+npm run dev
+```
 
-## Screenshots
- 
- first of all open React-Topic folder and open Hooks folder and open the Project.jsx and project .css and App.jsx 
+## 📂 Folder Structure
 
- how to run :- Open Terminal and cd React-Topics after that cd Hooks and after that cd UseEffect and after that run command npm run dev 
+```
+UseEffect
+│
+├── src
+│   ├── Api-Fetch
+│   ├── Digital-Watch
+│   ├── Stop-Watch
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── public
+└── README.md
+```
 
-1 Digital Clock using useEffect in Hooks
+## 📸 Screenshots
 
-![Digital Clock 1](./public/Screenshot/DigitalClock.png)
+### 1. ⏰ Digital Clock
 
-2 Stopwatch using UseEffect in Hooks
-![Stopwatch 2](./public/Screenshot/Stopwatch.png)
+![Digital Clock](./src/Digital-Watch/DigitalClock.png)
 
+---
 
+### 2. ⏱️ Stopwatch
 
+![Stopwatch](./src/Stop-Watch/Stopwatch.png)
 
+---
 
+### 3. 🌐 API Fetch with Search
+
+![API Fetch](./src/Api-Fetch/fetchapi.png)
+
+## 📖 Concepts Learned
+
+- useState
+- useEffect
+- Dependency Array
+- setInterval()
+- clearInterval()
+- Cleanup Function
+- API Fetching
+- async / await
+- fetch()
+- JSON Data
+- map()
+- filter()
+- includes()
+- Controlled Components
+- Search Functionality
+
+## 🎯 Future Projects
+
+- Loading State
+- Error Handling
+- Local Storage
+- Weather App
+- Scroll to Top
+- Infinite Scroll
+
+## 👨‍💻 Author
+
+**Aakash**
