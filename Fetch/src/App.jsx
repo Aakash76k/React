@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Fetch from './component/Fetch'
 import Axios from './component/Axios'
+import Card from './component/Card'
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
     <>
       <Fetch/>
       <Axios/>
+      <Card/>
     </>
   )
 }

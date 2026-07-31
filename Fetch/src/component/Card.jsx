@@ -1,24 +1,70 @@
-import React , {useEffect, useEfffect, useState} from 'react'
+import React, { useEffect , useState} from 'react'
 
-const Card = () => {
-    const[product, setProduct] = useState([])
-    const [loading,setLoading] = useState(true)
-    const[currentPage, setCurrentpage] = useState(1)
+// Paginations
 
-const productPerPage = 4
+ const Card = () => {
+  const [products, setProducts] = useState([])
+  const [laoding, setLoading] = useState(true)
+  const [currentPage , setCurrentpage] = useState(1)
 
-    useEffect(()=>{
-        fetch('https://fakestoreapi.com/products')
-        .then((res)=>res.json())
-        .then((data)=>{
-            setProduct(data)
-            setLoading(false)
-        })
-    },[])
+  const productPerPage = 4
+
+  useEffect(()=>{
+    fetch('https://fakestoreapi.com/products')
+    .then((res)=>res.json())
+    .then((data)=>{
+      setProducts(data)
+      setLoading(false)
+
+
+    })
+  },[])
+
+   const totalPages =   Math.ceil(products.length / productPerPage)
+    const lastIndexPage =   currentPage * productPerPage
+    const firstIndexPage  =  lastIndexPage  - productPerPage
+
+  const indexOfFistPage  =  products.slice(firstIndexPage ,lastIndexPage );
+
+  if(laoding){
+    return (
+      <p>Loading...</p>
+    )
+  }
+
+
 
   return (
-    <div></div>
+    <> 
+    <div className='flex flex-wrap gap-4'>
+      {indexOfFistPage.map((product) => (
+        <div key={product.id}  className='flex flex-col justify-center items-center border border-3 gap-4' >
+          <div>
+            <img src={product.image} alt={product.title} className='w-[200px]' />
+          </div>
+          <div>
+            <p>{product.category}</p>
+            <p>{product.title}</p>
+            <p>{product.price}</p>
+          </div>
+
+
+        </div>
+      ))}
+    </div>
+
+    <div>
+      <button 
+      disabled={currentPage ===1}
+      onClick={()=>setCurrentpage(prev => prev-1)} >←Prev</button>
+      <span>Pages {currentPage} to {totalPages} </span>
+      <button disabled={currentPage === totalPages } onClick = {()=>setCurrentpage(prev => prev+1)} >→Next</button>
+
+    </div>
+    </>
   )
 }
 
 export default Card;
+
+
