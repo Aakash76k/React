@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { CartesianGrid, Legend, Line, LineChart, XAxis, YAxis } from 'recharts';
+import { RechartsDevtools } from '@recharts/devtools';
+
 
 const Animation = () => {
     useEffect(()=>{
@@ -9,6 +12,45 @@ const Animation = () => {
             once:false
         })
     },[])
+
+    const data = [
+  {
+    name: 'A',
+    uv: 400,
+    pv: 240,
+    amt: 2400,
+  },
+  {
+    name: 'B',
+    uv: 300,
+    pv: 456,
+    amt: 2400,
+  },
+  {
+    name: 'C',
+    uv: 300,
+    pv: 139,
+    amt: 2400,
+  },
+  {
+    name: 'D',
+    uv: 200,
+    pv: 980,
+    amt: 2400,
+  },
+  {
+    name: 'E',
+    uv: 278,
+    pv: 390,
+    amt: 2400,
+  },
+  {
+    name: 'F',
+    uv: 189,
+    pv: 480,
+    amt: 2400,
+  },
+];
   return (
     <div>
         {/* navbar  */}
@@ -73,12 +115,157 @@ const Animation = () => {
         </div>
       </div>
       <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-        <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600" />
+        <img className="object-cover object-center rounded" alt="hero" src="https://th.bing.com/th/id/OIP.1zIwY9hrcRVit24BKtTZcAHaD6?w=319&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3/720x600" />
       </div>
     </div>
   </section>
+{/* cards */}
+
+<section className="text-gray-600 body-font" data-aos="zoom-in-up">
+    <h1 className=''>Cards</h1>
+  <div className="container px-5 py-24 mx-auto">
+    <div className="flex flex-wrap -m-4">
+      <div className="p-4 md:w-1/3">
+        <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+          <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://th.bing.com/th/id/OIP.xdBM9LLDDAResYuXtwdbwwHaE8?w=217&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3/720x400" alt="blog" />
+          <div className="p-6">
+            <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
+            <p className="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            <div className="flex items-center flex-wrap ">
+              <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                <svg className="w-4 h-4 mr-1" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx={12} cy={12} r={3} />
+                </svg>1.2K
+              </span>
+              <span className="text-gray-400 inline-flex items-center leading-none text-sm">
+                <svg className="w-4 h-4 mr-1" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                </svg>6
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="p-4 md:w-1/3">
+        <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+          <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://th.bing.com/th/id/OIP.xdBM9LLDDAResYuXtwdbwwHaE8?w=217&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3/721x401" alt="blog" />
+          <div className="p-6">
+            <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
+            <p className="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            <div className="flex items-center flex-wrap">
+              <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                <svg className="w-4 h-4 mr-1" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx={12} cy={12} r={3} />
+                </svg>1.2K
+              </span>
+              <span className="text-gray-400 inline-flex items-center leading-none text-sm">
+                <svg className="w-4 h-4 mr-1" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                </svg>6
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="p-4 md:w-1/3">
+        <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+          <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://th.bing.com/th/id/OIP.WsteyB3be8D2w-KBlfTLqQHaE8?w=276&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3/722x402" alt="blog" />
+          <div className="p-6">
+            <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
+            <p className="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            <div className="flex items-center flex-wrap ">
+              <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                <svg className="w-4 h-4 mr-1" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx={12} cy={12} r={3} />
+                </svg>1.2K
+              </span>
+              <span className="text-gray-400 inline-flex items-center leading-none text-sm">
+                <svg className="w-4 h-4 mr-1" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                </svg>6
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* rechart */}
+
+
+
+
+// #endregion
+
+
+    <LineChart style={{ width: '100%', aspectRatio: 1.618, maxWidth: 800, margin: 'auto' }} responsive data={data}>
+      <CartesianGrid stroke="var(--color-border-3)" strokeDasharray="5 5" />
+      <XAxis dataKey="name" stroke="var(--color-text-3)" />
+      <YAxis width="auto" stroke="var(--color-text-3)" />
+      <Line
+        type="monotone"
+        dataKey="uv"
+        stroke="var(--color-chart-1)"
+        dot={{
+          fill: 'var(--color-surface-base)',
+        }}
+        activeDot={{
+          stroke: 'var(--color-surface-base)',
+        }}
+      />
+      <Line
+        type="monotone"
+        dataKey="pv"
+        stroke="var(--color-chart-2)"
+        dot={{
+          fill: 'var(--color-surface-base)',
+        }}
+        activeDot={{
+          stroke: 'var(--color-surface-base)',
+        }}
+      />
+      <Legend
+        position="insideTopRight"
+        offset={20}
+        wrapperStyle={{
+          border: '1px solid var(--color-border-3)',
+          borderRadius: 5,
+          padding: '1ex',
+          background: 'var(--color-surface-base)',
+        }}
+      />
+      <RechartsDevtools />
+    </LineChart>
+
+
   {/* section-1 */}
-  <section className="text-gray-600 body-font" data-aos="zoom-in">
+  <section className="text-gray-600 body-font" data-aos="zoom-in-down">
     <div className="container px-5 py-24 mx-auto">
       <div className="flex flex-col text-center w-full mb-20">
         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
@@ -129,7 +316,7 @@ const Animation = () => {
     </div>
   </section>
  {/* section - 2 */  }
-  <section className="text-gray-600 body-font" data-aos="zoom-in-down">
+  <section className="text-gray-600 body-font" data-aos="zoom-in-up">
     <div className="container px-5 py-24 mx-auto">
       <div className="flex flex-col text-center w-full mb-20">
         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Team</h1>
@@ -138,7 +325,7 @@ const Animation = () => {
       <div className="flex flex-wrap -m-2">
         <div className="p-2 lg:w-1/3 md:w-1/2 w-full">
           <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/80x80" />
+            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://www.bing.com/th/id/OIP.G37tgeQqSNt7v2oPfj9ltQHaE7?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2/80x80" />
             <div className="flex-grow">
               <h2 className="text-gray-900 title-font font-medium">Holden Caulfield</h2>
               <p className="text-gray-500">UI Designer</p>
@@ -147,7 +334,7 @@ const Animation = () => {
         </div>
         <div className="p-2 lg:w-1/3 md:w-1/2 w-full">
           <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/84x84" />
+            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://www.bing.com/th/id/OIP.cJJAyBQIu7nctx45E_X3cQHaFj?w=193&h=145&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2/84x84" />
             <div className="flex-grow">
               <h2 className="text-gray-900 title-font font-medium">Henry Letham</h2>
               <p className="text-gray-500">CTO</p>
@@ -156,7 +343,7 @@ const Animation = () => {
         </div>
         <div className="p-2 lg:w-1/3 md:w-1/2 w-full">
           <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/88x88" />
+            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://www.bing.com/th/id/OIP.Mvcr0QDsGXOx29cSBfXd6AHaE7?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2/88x88" />
             <div className="flex-grow">
               <h2 className="text-gray-900 title-font font-medium">Oskar Blinde</h2>
               <p className="text-gray-500">Founder</p>
@@ -165,7 +352,7 @@ const Animation = () => {
         </div>
         <div className="p-2 lg:w-1/3 md:w-1/2 w-full">
           <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/90x90" />
+            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://www.bing.com/th/id/OIP.7cRYFyLoDEDh4sRtM73vvwHaDg?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2/90x90" />
             <div className="flex-grow">
               <h2 className="text-gray-900 title-font font-medium">John Doe</h2>
               <p className="text-gray-500">DevOps</p>
@@ -174,7 +361,7 @@ const Animation = () => {
         </div>
         <div className="p-2 lg:w-1/3 md:w-1/2 w-full">
           <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/94x94" />
+            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://www.bing.com/th/id/OIP.U_VJuupQohwnzXcKMztqWgHaEo?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2/94x94" />
             <div className="flex-grow">
               <h2 className="text-gray-900 title-font font-medium">Martin Eden</h2>
               <p className="text-gray-500">Software Engineer</p>
@@ -183,7 +370,7 @@ const Animation = () => {
         </div>
         <div className="p-2 lg:w-1/3 md:w-1/2 w-full">
           <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/98x98" />
+            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://www.bing.com/th/id/OIP.0JbZkj5mDd4eiI6qAkUebQHaE8?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2.com/98x98" />
             <div className="flex-grow">
               <h2 className="text-gray-900 title-font font-medium">Boris Kitua</h2>
               <p className="text-gray-500">UX Researcher</p>
@@ -192,7 +379,7 @@ const Animation = () => {
         </div>
         <div className="p-2 lg:w-1/3 md:w-1/2 w-full">
           <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/100x90" />
+            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://www.bing.com/th/id/OIP.ayACpdslq2Oq9hSUQnfMWQHaF1?w=193&h=152&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2/100x90" />
             <div className="flex-grow">
               <h2 className="text-gray-900 title-font font-medium">Atticus Finch</h2>
               <p className="text-gray-500">QA Engineer</p>
@@ -201,7 +388,7 @@ const Animation = () => {
         </div>
         <div className="p-2 lg:w-1/3 md:w-1/2 w-full">
           <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/104x94" />
+            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://www.bing.com/th/id/OIP.9VGPmrFwv5efx2jWmABMHgHaEO?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2/104x94" />
             <div className="flex-grow">
               <h2 className="text-gray-900 title-font font-medium">Alper Kamu</h2>
               <p className="text-gray-500">System</p>
@@ -210,7 +397,7 @@ const Animation = () => {
         </div>
         <div className="p-2 lg:w-1/3 md:w-1/2 w-full">
           <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/108x98" />
+            <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://www.bing.com/th/id/OIP.9VGPmrFwv5efx2jWmABMHgHaEO?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2/108x98" />
             <div className="flex-grow">
               <h2 className="text-gray-900 title-font font-medium">Rodrigo Monchi</h2>
               <p className="text-gray-500">Product Manager</p>
@@ -221,18 +408,18 @@ const Animation = () => {
     </div>
   </section>
 {/* section 3 */}
-  <section className="text-gray-600 body-font">
+  <section className="text-gray-600 body-font" data-aos="flip-right">
     <div className="container px-5 py-24 mx-auto">
       <h1 className="text-3xl font-medium title-font text-gray-900 mb-12 text-center">Testimonials</h1>
       <div className="flex flex-wrap -m-4">
         <div className="p-4 md:w-1/2 w-full">
           <div className="h-full bg-gray-100 p-8 rounded">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+            <svg xmlns="https://www.bing.com/th/id/OIP.a6ohxKL102obzd40XSdWmQAAAA?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2" fill="currentColor" className="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
               <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z" />
             </svg>
             <p className="leading-relaxed mb-6">Synth chartreuse iPhone lomo cray raw denim brunch everyday carry neutra before they sold out fixie 90's microdosing. Tacos pinterest fanny pack venmo, post-ironic heirloom try-hard pabst authentic iceland.</p>
             <a className="inline-flex items-center">
-              <img alt="testimonial" src="https://dummyimage.com/106x106" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
+              <img alt="testimonial" src="https://www.bing.com/th/id/OIP.a6ohxKL102obzd40XSdWmQAAAA?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
               <span className="flex-grow flex flex-col pl-4">
                 <span className="title-font font-medium text-gray-900">Holden Caulfield</span>
                 <span className="text-gray-500 text-sm">UI DEVELOPER</span>
@@ -247,7 +434,7 @@ const Animation = () => {
             </svg>
             <p className="leading-relaxed mb-6">Synth chartreuse iPhone lomo cray raw denim brunch everyday carry neutra before they sold out fixie 90's microdosing. Tacos pinterest fanny pack venmo, post-ironic heirloom try-hard pabst authentic iceland.</p>
             <a className="inline-flex items-center">
-              <img alt="testimonial" src="https://dummyimage.com/107x107" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
+              <img alt="testimonial" src="https://www.bing.com/th/id/OIP.oaOiUTjgdNluepJElGfnBQHaE8?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
               <span className="flex-grow flex flex-col pl-4">
                 <span className="title-font font-medium text-gray-900">Alper Kamu</span>
                 <span className="text-gray-500 text-sm">DESIGNER</span>
@@ -259,7 +446,7 @@ const Animation = () => {
     </div>
   </section>
  {/* section 4 */}
-  <footer className="text-gray-600 body-font">
+  <footer className="text-gray-600 body-font" data-aos="fade-left">
     <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
       <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
         <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
