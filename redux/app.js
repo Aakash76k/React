@@ -6,7 +6,24 @@ const initialState = {
 }
 
 function bankReducer(state = initialState, action){
-    switch(){
-        
+    switch(action.type){
+        case "DEPOSIT":
+            return{
+                ...state,
+                balance:state.balance + action.payload
+            };
+
+        case "WITHDRAW":
+            if(state.balance < action.payload){
+                console.log("Low balance");
+                return state;
+            }
+            return{
+                ...state,
+                balance:state.balance - action.payload
+            };
+            default:
+                return state;
+
     }
 }
